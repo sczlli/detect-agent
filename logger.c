@@ -49,7 +49,7 @@ void logger_log(LogLevel level, const char* file, int line, const char* format, 
     strftime(time_buffer, sizeof(time_buffer), "%Y-%m-%d %H:%M:%S", tm_info);
 
     // Prepare the full log message
-    char log_message[1024];
+    char log_message[2048];
     int offset = 0;
 
     // Add timestamp, log level, and file/line info
