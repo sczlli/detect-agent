@@ -1,6 +1,22 @@
 #include "config.h"
-#include <stdio.h> 
+#include "logger.h" // For logging errors
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
+#define MAX_CONFIG_ENTRIES 50
+#define MAX_LINE_LENGTH 256
+
+// Structure to hold a single key-value pair
+typedef struct {
+    char* key;
+    char* value;
+} ConfigEntry;
+
+// Static array to store all configuration entries
+static ConfigEntry config_data[MAX_CONFIG_ENTRIES];
+static int config_count = 0;
 
 
 int config_load(const char* filepath) {
