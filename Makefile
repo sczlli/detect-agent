@@ -20,7 +20,4 @@ run: all
 	./$(TARGET)
 
 clean:
-	rm -f $(OBJS) $(TARGET)\
-
-
-rm -f $(OBJS) $(TARGET) src/core/*.o
+	rm -f $(OBJS) $(TARGET) src/core/*.o
